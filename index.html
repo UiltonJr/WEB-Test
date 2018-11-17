@@ -1,8 +1,38 @@
 <html>
-    <head>
-        <title> WEB tets project </title>
-    </head>
-    <body>
-        <h1> Teste para WEB com git </h1>
-    </body>
+<head>
+    <title> WEB test project </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-div">
+            <h3> Login </h3>
+            <input type="email" placeholder="email..." />
+            <input type="password" placeholder="password" />
+
+            <button onclick="login()">click to Login</button>
+    </div>
+
+    <div class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p>wlcome to firebase test congratulations.</p>
+        <button>Logout</button>
+    </div>
+        
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCS5i1SahU3t5XfzrXuZrfz_OuAYdKCRg4",
+            authDomain: "my-photos-fb6a9.firebaseapp.com",
+            databaseURL: "https://my-photos-fb6a9.firebaseio.com",
+            projectId: "my-photos-fb6a9",
+            storageBucket: "my-photos-fb6a9.appspot.com",
+            messagingSenderId: "606768916512"
+            };
+            firebase.initializeApp(config);
+    </script>
+
+    <script src="script.js"></script>
+</body>
 </html>

@@ -7,10 +7,9 @@
 <body>
     <div class="main-div">
             <h3> Login </h3>
-            <input type="email" placeholder="email..." />
-            <input type="password" placeholder="password" />
-
-            <button onclick="login()">click to Login</button>
+            <input type="email" placeholder="email..." id="email_field" />
+            <input type="password" placeholder="password" id="password_field" />
+            <button onclick="login()">Click to Login</button>
     </div>
 
     <div class="loggedin-div">
@@ -32,7 +31,6 @@
             };
             firebase.initializeApp(config);
     </script>
-
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

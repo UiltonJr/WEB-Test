@@ -5,17 +5,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-div">
+    <div id="login_div"class="main-div">
             <h3> Login </h3>
-            <input type="email" placeholder="email..." id="email_field" />
+            <input type="email" placeholder="email..." id="email_field"/>
             <input type="password" placeholder="password" id="password_field" />
             <button onclick="login()">Click to Login</button>
     </div>
 
-    <div class="loggedin-div">
-        <h3>Welcome User</h3>
-        <p>wlcome to firebase test congratulations.</p>
-        <button>Logout</button>
+    <div id="user_div" class="loggedin-div">
+        <h3>Welcome to Firebase test.</h3>
+        <p id= "user_para"> Welcome to firebase. </p>
+        <button onclick="logout()">Logout</button>
     </div>
         
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>

@@ -3,6 +3,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
         document.getElementById("user_div").style.display = "block";
         document.getElementById("login_div").style.display = "none";
+        document.getElementById("register_div").style.display = "none";
 
         var user = firebase.auth().currentUser;
 
@@ -10,10 +11,19 @@ firebase.auth().onAuthStateChanged(function(user) {
             var email_id = user.email;
             document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
         }
-    } else {
+    }else {
       // No user is signed in.
       document.getElementById("user_div").style.display = "none";
       document.getElementById("login_div").style.display = "block";
+      document.getElementById("register_div").style.display = "none";
+
+      if (document.getElementById("btn").value == "btn"){
+          window.alert("ashdh");
+      }
+
+      if(document.getElementById("btn") == "btn"){
+        window.alert("ok");
+      } 
     }
   });
 
@@ -37,7 +47,7 @@ function logout(){
         // An error happened.
       });
 }
-function register(){
+function compregister(){
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -46,3 +56,8 @@ function register(){
   });
 
 }
+/*function register(){
+    document.getElementById("user_div").style.display = "none";
+    document.getElementById("login_div").style.display = "none";
+    document.getElementById("register_div").style.display = "block";
+}*/

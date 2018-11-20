@@ -16,14 +16,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("user_div").style.display = "none";
       document.getElementById("login_div").style.display = "block";
       document.getElementById("register_div").style.display = "none";
-
-      if (document.getElementById("btn").value == "btn"){
-          window.alert("ashdh");
-      }
-
-      if(document.getElementById("btn") == "btn"){
-        window.alert("ok");
-      } 
     }
   });
 

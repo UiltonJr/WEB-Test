@@ -1,22 +1,24 @@
 <html>
+
 <head>
     <title> WEB test project </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="login_div"class="main-div">
-            <h3> Login </h3>
-            <input type="email" placeholder="email..." id="email_field"/>
-            <input type="password" placeholder="password" id="password_field" />
-            <button onclick="login()">Click to Login</button>
-            <button id = "btn"onclick="register()">Register</button>
+    <div id="login_div" class="main-div">
+        <h3> Login </h3>
+        <input type="email" placeholder="email..." id="email_field" />
+        <input type="password" placeholder="password" id="password_field" />
+        <button onclick="login()">Click to Login</button>
+        <button id="btz" onclick="register()" value=true>Register</button>
     </div>
 
     <div id="user_div" class="loggedin-div">
         <h3>Welcome to Firebase test.</h3>
-        <p id= "user_para"> Welcome to firebase. </p>
-        <button onclick="">Logout</button>
+        <p id="user_para"> Welcome to firebase. </p>
+        <button onclick="logout()">Logout</button>
     </div>
 
     <div id="register_div" class="register-div">
@@ -27,7 +29,7 @@
         <button onclick="compRegister()">Register</button>
 
     </div>
-        
+
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -38,9 +40,10 @@
             projectId: "my-photos-fb6a9",
             storageBucket: "my-photos-fb6a9.appspot.com",
             messagingSenderId: "606768916512"
-            };
-            firebase.initializeApp(config);
+        };
+        firebase.initializeApp(config);
     </script>
     <script src="index.js"></script>
 </body>
+
 </html>
